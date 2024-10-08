@@ -75,6 +75,10 @@ Here are some useful commands for managing the project:
 - **Purpose**: A testing framework that focuses on simplicity and flexibility.
 - **Why Use**: It helps in writing and running tests to ensure the correctness of the application.
 
+### 8. `jest-mock`
+- **Purpose**: A library for mocking functions and modules in Jest tests.
+- **Why Use**: It helps in isolating the code under test and mocking dependencies for unit testing.
+
 ## How to Configure Docker with MySQL for Testing
 
 To set up a MySQL database using Docker for testing purposes, follow these steps:
