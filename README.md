@@ -44,8 +44,7 @@ Here are some useful commands for managing the project:
 
 ## Architecture
 
-- **GraphQL** (`/src/graphql`): Contains the GraphQL schema, and migration files.
-- **Prisma** (`/src//prisma`): Contains the Prisma client consumed by the GraphQL resolvers.
+- **Prisma** (`/src//prisma`): Contains the prisma schema, migration files and export client consumed by the GraphQL resolvers.
 - **Interfaces** (`/src/interfaces`): Contains the TypeScript interfaces used in the project.
 - **Resolvers** (`/src/resolvers`): Contains the GraphQL resolvers that handle incoming queries and mutations.
 - **Schemas** (`/src/schemas`): Contains the gql scripts for the GraphQL schema.
