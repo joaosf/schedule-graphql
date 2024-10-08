@@ -160,3 +160,4 @@ This setup will allow you to test your application with a MySQL database running
 - **Improve Error Handling**: Enhance error handling to provide better feedback to clients.
 - **Create whole dependency entities**: Implement all entities (as `User` and `Account`) to integrate with Schedule entity.
 - **Add Integration Tests**: Write integration tests to ensure that the application works as expected.
+- **Add CI/CD Pipeline**: Set up a CI/CD pipeline to automate testing and deployment processes.
