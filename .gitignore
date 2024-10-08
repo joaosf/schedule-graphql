@@ -30,4 +30,4 @@ prisma/dev.db
 dist/
 build/
 .idea/
-
+coverage/

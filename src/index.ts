@@ -1,4 +1,4 @@
-import express, { Application } from 'express'
+import express from 'express'
 import { ApolloServer } from 'apollo-server-express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
@@ -9,7 +9,7 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const app: Application = express()
+const app: any = express()
 const PORT = process.env.PORT || 3000
 
 app.use(cors())
@@ -25,7 +25,6 @@ const server = new ApolloServer({
 
 const startServer = async () => {
   await server.start()
-  // @ts-ignore
   server.applyMiddleware({ app, path: '/graphql' })
 }
 

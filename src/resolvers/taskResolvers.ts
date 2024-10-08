@@ -1,9 +1,8 @@
 import { Task as TaskModel } from '@prisma/client'
-import { IResolvers } from '@graphql-tools/utils'
 import prisma from '../prisma/client'
 import { CreateTaskInput, UpdateTaskInput } from '../interfaces/taskInterface'
 
-const taskResolvers: IResolvers = {
+const taskResolvers = {
   Query: {
     tasks: async (): Promise<TaskModel[]> => await prisma.task.findMany(),
     task: async (_: unknown, { id }: { id: string }): Promise<TaskModel | null> =>
