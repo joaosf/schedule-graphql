@@ -44,6 +44,13 @@ Here are some useful commands for managing the project:
 - **Resolvers** (`/src/resolvers`): Contains the GraphQL resolvers that handle incoming queries and mutations.
 - **Schemas** (`/src/schemas`): Contains the gql scripts for the GraphQL schema.
 
+## Unit Tests
+
+- **Focus**: I've created unit tests to make sure that the resolvers and schemas are working as expected.
+- **Script Default**:
+  1. **Arrange**: Set up the test data and mocks.
+  2. **Act**: Call the function or method being tested.
+  3. **Assert**: Check the results and make assertions.
 
 ## Plugins Used
 
