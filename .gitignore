@@ -29,4 +29,5 @@ prisma/dev.db
 # Build output
 dist/
 build/
+.idea/
 
