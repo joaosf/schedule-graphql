@@ -153,3 +153,10 @@ To set up a MySQL database using Docker for testing purposes, follow these steps
    ```
 
 This setup will allow you to test your application with a MySQL database running in a Docker container.
+
+## Next Steps
+
+- **Add More Features**: Implement more features like authentication, authorization, and pagination.
+- **Improve Error Handling**: Enhance error handling to provide better feedback to clients.
+- **Create whole dependency entities**: Implement all entities (as `User` and `Account`) to integrate with Schedule entity.
+- **Add Integration Tests**: Write integration tests to ensure that the application works as expected.
