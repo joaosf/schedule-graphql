@@ -133,6 +133,10 @@ To set up a MySQL database using Docker for testing purposes, follow these steps
      brew install postgresql
      psql -h localhost -U admin -d mydb
      ```
+   - Query example, should return a list of schedules:
+     ```sql
+     SELECT * FROM "Schedule";
+     ```
 
 5. **Configure Prisma to use the Docker MySQL instance**:
 
