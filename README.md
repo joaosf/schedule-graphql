@@ -30,7 +30,7 @@ Here are some useful commands for managing the project:
 
 - **Prisma Client**
 
-  - Commands should run on `src/graphql` folder
+  - Commands should run on `src/prisma` folder
   - **Generate Prisma client**:
 
     ```sh
