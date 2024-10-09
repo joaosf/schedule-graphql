@@ -1,6 +1,6 @@
 import { TaskType } from '@prisma/client'
 
-interface CreateTaskInput {
+interface ICreateTask {
   accountId: number
   scheduleId: string
   startTime: string
@@ -8,7 +8,7 @@ interface CreateTaskInput {
   type: TaskType
 }
 
-interface UpdateTaskInput {
+interface IUpdateTask {
   accountId?: number
   scheduleId?: string
   startTime?: string
@@ -16,4 +16,4 @@ interface UpdateTaskInput {
   type?: TaskType
 }
 
-export { CreateTaskInput, UpdateTaskInput }
+export { ICreateTask, IUpdateTask }

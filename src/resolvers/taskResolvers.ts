@@ -1,6 +1,6 @@
 import { Task as TaskModel } from '@prisma/client'
 import prisma from '../prisma/client'
-import { CreateTaskInput, UpdateTaskInput } from '../interfaces/taskInterface'
+import { ICreateTask, IUpdateTask } from '../interfaces/taskInterface'
 
 const taskResolvers = {
   Query: {
@@ -12,7 +12,7 @@ const taskResolvers = {
   },
 
   Mutation: {
-    createTask: async (_: unknown, { data }: { data: CreateTaskInput }): Promise<TaskModel> =>
+    createTask: async (_: unknown, { data }: { data: ICreateTask }): Promise<TaskModel> =>
       await prisma.task.create({
         data: {
           accountId: data.accountId,
@@ -22,7 +22,7 @@ const taskResolvers = {
           type: data.type,
         },
       }),
-    updateTask: async (_: unknown, { id, data }: { id: string; data: UpdateTaskInput }): Promise<TaskModel> =>
+    updateTask: async (_: unknown, { id, data }: { id: string; data: IUpdateTask }): Promise<TaskModel> =>
       await prisma.task.update({
         where: { id },
         data: {

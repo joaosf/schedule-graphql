@@ -1,4 +1,4 @@
-import { CreateScheduleInput, UpdateScheduleInput } from '../interfaces/scheduleInterface'
+import { ICreateSchedule, IUpdateSchedule } from '../interfaces/scheduleInterface'
 import prisma from '../prisma/client'
 
 const scheduleResolvers = {
@@ -24,7 +24,7 @@ const scheduleResolvers = {
   },
 
   Mutation: {
-    createSchedule: async (_parent: any, args: { data: CreateScheduleInput }) => {
+    createSchedule: async (_parent: any, args: { data: ICreateSchedule }) => {
       const { accountId, agentId, startTime, endTime } = args.data
       return prisma.schedule.create({
         data: {
@@ -36,7 +36,7 @@ const scheduleResolvers = {
       })
     },
 
-    updateSchedule: async (_parent: any, args: { id: string; data: UpdateScheduleInput }) => {
+    updateSchedule: async (_parent: any, args: { id: string; data: IUpdateSchedule }) => {
       const { accountId, agentId, startTime, endTime } = args.data
       return prisma.schedule.update({
         where: { id: args.id },

@@ -1,26 +1,6 @@
 import request from 'supertest'
-import express from 'express'
-import { ApolloServer } from 'apollo-server-express'
-import resolver from '../../src/resolvers/resolver'
 import prisma from '../../src/prisma/client'
-import schema from '../../src/schemas/schema'
-import dotenv from 'dotenv'
-
-dotenv.config({ path: '.env.test' })
-
-const app: any = express()
-const server = new ApolloServer({
-  typeDefs: schema,
-  resolvers: resolver,
-  context: () => ({
-    prisma,
-  }),
-})
-
-const startServer = async () => {
-  await server.start()
-  server.applyMiddleware({ app, path: '/graphql' })
-}
+import { app, startServer } from './utils'
 
 beforeAll(async () => {
   await startServer()

@@ -1,6 +1,6 @@
 import prisma from '../../src/prisma/client'
 import scheduleResolvers from '../../src/resolvers/scheduleResolvers'
-import { CreateScheduleInput, UpdateScheduleInput } from '../../src/interfaces/scheduleInterface'
+import { ICreateSchedule, IUpdateSchedule } from '../../src/interfaces/scheduleInterface'
 
 jest.mock('../../src/prisma/client', () => ({
   schedule: {
@@ -49,7 +49,7 @@ describe('scheduleResolvers', () => {
 
   describe('Mutation: createSchedule', () => {
     it('should create a new schedule', async () => {
-      const input: CreateScheduleInput = {
+      const input: ICreateSchedule = {
         accountId: 1,
         agentId: 2,
         startTime: '2024-10-08T09:00:00Z',
@@ -76,7 +76,7 @@ describe('scheduleResolvers', () => {
 
   describe('Mutation: updateSchedule', () => {
     it('should update an existing schedule', async () => {
-      const input: UpdateScheduleInput = {
+      const input: IUpdateSchedule = {
         accountId: 1,
         agentId: 2,
         startTime: '2024-10-08T09:00:00Z',

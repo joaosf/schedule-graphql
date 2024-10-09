@@ -1,15 +1,15 @@
-interface CreateScheduleInput {
+interface ICreateSchedule {
   accountId: number
   agentId: number
   startTime: string
   endTime: string
 }
 
-interface UpdateScheduleInput {
+interface IUpdateSchedule {
   accountId?: number
   agentId?: number
   startTime?: string
   endTime?: string
 }
 
-export { CreateScheduleInput, UpdateScheduleInput }
+export { ICreateSchedule, IUpdateSchedule }

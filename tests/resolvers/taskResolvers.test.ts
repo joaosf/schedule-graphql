@@ -1,6 +1,6 @@
 import { Task as TaskModel } from '@prisma/client'
 import taskResolvers from '../../src/resolvers/taskResolvers'
-import { CreateTaskInput, UpdateTaskInput } from '../../src/interfaces/taskInterface'
+import { ICreateTask, IUpdateTask } from '../../src/interfaces/taskInterface'
 import prisma from '../../src/prisma/client'
 
 jest.mock('../../src/prisma/client', () => ({
@@ -54,7 +54,7 @@ describe('taskResolvers', () => {
 
   describe('Mutation: createTask', () => {
     it('should create a new task', async () => {
-      const input: CreateTaskInput = {
+      const input: ICreateTask = {
         accountId: 1,
         scheduleId: 'sched-1',
         startTime: '2024-10-08T09:00:00Z',
@@ -90,7 +90,7 @@ describe('taskResolvers', () => {
 
   describe('Mutation: updateTask', () => {
     it('should update an existing task', async () => {
-      const input: UpdateTaskInput = {
+      const input: IUpdateTask = {
         accountId: 1,
         scheduleId: 'sched-1',
         startTime: '2024-10-08T09:00:00Z',
