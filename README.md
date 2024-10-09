@@ -126,18 +126,19 @@ To set up a MySQL database using Docker for testing purposes, follow these steps
    docker ps
    ```
 
-4. **Connect to the MySQL database**:
+4. **Connect to the Postgres database**:
 
-   - Use a MySQL client or a tool like `mysql` CLI:
+   - Use a Postgres client or a tool like `psql` CLI:
      ```sh
-     mysql -h 127.0.0.1 -P 3306 -u user -p
+     brew install postgresql
+     psql -h localhost -U admin -d mydb
      ```
 
 5. **Configure Prisma to use the Docker MySQL instance**:
 
    - Update your `.env` file with the following:
      ```env
-     DATABASE_URL="mysql://user:password@localhost:3306/testdb"
+     DATABASE_URL="postgresql://admin:admin@localhost:5432/mydb?schema=public"
      ```
 
 6. **Generate Prisma client**:
